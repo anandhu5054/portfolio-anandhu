@@ -329,10 +329,9 @@ $("#contact-form").submit((e)=>{
       data:$("#contact-form").serialize(),
       method:"post",
       success:function (response){
-        setTimeout(function(){
-        }, 1500); 
         document.getElementById("submission-msg").innerHTML = "SUBMITTED SUCCESSFULLY";
-          window.location.reload()
+        setTimeout(function(){
+          window.location.reload()}, 2000); 
           //window.location.href="https://google.com"
       },
       error:function (err){
